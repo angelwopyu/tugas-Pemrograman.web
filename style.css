@@ -1,0 +1,307 @@
+/* ===== Pengaturan dasar ===== */
+:root {
+  --teks: #1e2a33;
+  --teks-lembut: #4a565f;
+  --latar: #eccd89;
+  --latar-lembut: #ebb653;
+  --aksen: #8c1b1b;
+  --aksen-gelap: #8a0b0b;
+  --garis: #9ea5a8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--teks);
+  background: var(--latar);
+}
+
+a {
+  color: var(--aksen-gelap);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--aksen);
+  outline-offset: 3px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+/* ===== Header dan navigasi ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.9rem 6%;
+  background: var(--latar);
+  border-bottom: 1px solid var(--garis);
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teks);
+  text-decoration: none;
+}
+
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-header nav a {
+  color: var(--teks-lembut);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover {
+  color: var(--aksen-gelap);
+  border-bottom-color: var(--aksen);
+}
+
+/* ===== Isi utama ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+main section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+main section:last-child {
+  border-bottom: none;
+}
+
+main h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.25rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: var(--teks-lembut);
+}
+
+/* ===== Perkenalan diri ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 3.5rem;
+}
+
+.hero img {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--latar-lembut);
+  background: var(--latar-lembut);
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+}
+
+.role {
+  font-weight: 600;
+  color: var(--aksen-gelap);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--aksen);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background: var(--aksen-gelap);
+}
+
+/* ===== Pendidikan ===== */
+.timeline {
+  border-left: 3px solid var(--aksen);
+  padding-left: 1.5rem;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 9px);
+  top: 0.45rem;
+  width: 15px;
+  height: 15px;
+  background: var(--latar);
+  border: 3px solid var(--aksen);
+  border-radius: 50%;
+}
+
+.timeline h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.timeline p {
+  margin-bottom: 0.1rem;
+}
+
+/* ===== Keterampilan ===== */
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.skill-groups h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  padding: 0.3rem 0.9rem;
+  background: var(--latar-lembut);
+  border: 1px solid var(--garis);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* ===== Proyek ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.projects article {
+  padding: 1.25rem 1.4rem;
+  background: var(--latar-lembut);
+  border-left: 4px solid var(--aksen);
+  border-radius: 0 8px 8px 0;
+}
+
+.projects h3 {
+  font-size: 1.1rem;
+}
+
+.projects .meta {
+  margin-bottom: 0;
+}
+
+/* ===== Kontak ===== */
+.contact li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+.contact li:last-child {
+  border-bottom: none;
+}
+
+.contact strong {
+  min-width: 100px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 1.5rem 6%;
+  text-align: center;
+  color: var(--teks-lembut);
+  background: var(--latar-lembut);
+  border-top: 1px solid var(--garis);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== Tampilan HP dan tablet ===== */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .skill-groups,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+} 
